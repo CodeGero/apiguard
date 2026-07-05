@@ -1,0 +1,34 @@
+openapi: "3.0.3"
+info:
+  title: Parameter Test API v2
+  version: "2.0.0"
+paths:
+  /items:
+    get:
+      summary: List items
+      operationId: listItems
+      parameters:
+        - name: filter
+          in: query
+          required: true
+          schema:
+            type: integer
+        - name: category
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [a, b]
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: order
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Items

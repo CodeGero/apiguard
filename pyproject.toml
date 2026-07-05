@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kryptorious-apiguard"
+version = "1.0.0"
+description = "Detect breaking changes in OpenAPI specs before they reach production"
+readme = "README.md"
+license = {text = "Proprietary"}
+authors = [
+    {name = "Kryptorious", email = "kryptorious@pm.me"}
+]
+keywords = ["openapi", "api", "breaking-changes", "swagger", "diff", "ci-cd", "devops"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Internet :: WWW/HTTP",
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "click>=8.1.0",
+    "pyyaml>=6.0",
+    "rich>=13.0.0",
+]
+
+[project.urls]
+Homepage = "https://kryptorious.gumroad.com/l/jbvet"
+Documentation = "https://kryptorious.gumroad.com/l/jbvet"
+"Bug Tracker" = "https://github.com/kryptorious/apiguard/issues"
+Repository = "https://github.com/kryptorious/apiguard"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+apiguard = "apiguard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short --strict-markers"

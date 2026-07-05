@@ -1,0 +1,113 @@
+openapi: "3.0.3"
+info:
+  title: Petstore API v2
+  version: "2.0.0"
+paths:
+  /pets:
+    get:
+      summary: List all pets
+      operationId: listPets
+      deprecated: true
+      parameters:
+        - name: limit
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: A list of pets
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Pet"
+                  total:
+                    type: string
+        "400":
+          description: Bad request
+    post:
+      summary: Create a pet
+      operationId: createPet
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, species]
+              properties:
+                name:
+                  type: integer
+                species:
+                  type: string
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Pet"
+  /pets/{petId}:
+    get:
+      summary: Get a pet by ID
+      operationId: getPet
+      parameters:
+        - name: petId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A pet
+          content:
+            application/json:
+              schema:
+                type: string
+        "404":
+          description: Not found
+  /pets/{petId}/photos:
+    get:
+      summary: Get pet photos
+      operationId: getPetPhotos
+      parameters:
+        - name: petId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Pet photos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    url:
+                      type: string
+components:
+  schemas:
+    Pet:
+      type: object
+      required: [id, name, species]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        species:
+          type: string

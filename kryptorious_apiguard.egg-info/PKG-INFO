@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: kryptorious-apiguard
+Version: 1.0.0
+Summary: Detect breaking changes in OpenAPI specs before they reach production
+Author-email: Kryptorious <kryptorious@pm.me>
+License: Proprietary
+Project-URL: Homepage, https://kryptorious.gumroad.com/l/jbvet
+Project-URL: Documentation, https://kryptorious.gumroad.com/l/jbvet
+Project-URL: Bug Tracker, https://github.com/kryptorious/apiguard/issues
+Project-URL: Repository, https://github.com/kryptorious/apiguard
+Keywords: openapi,api,breaking-changes,swagger,diff,ci-cd,devops
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: rich>=13.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0; extra == "dev"
+Requires-Dist: black>=23.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
