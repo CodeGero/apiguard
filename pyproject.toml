@@ -7,7 +7,7 @@ name = "kryptorious-apiguard"
 version = "1.0.0"
 description = "Detect breaking changes in OpenAPI specs before they reach production"
 readme = "README.md"
-license = {text = "Proprietary"}
+license = {text = "MIT"}
 authors = [
     {name = "Kryptorious", email = "kryptorious@pm.me"}
 ]
@@ -18,7 +18,7 @@ classifiers = [
     "Topic :: Software Development :: Quality Assurance",
     "Topic :: Software Development :: Testing",
     "Topic :: Internet :: WWW/HTTP",
-    "License :: Other/Proprietary License",
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
@@ -38,8 +38,8 @@ dependencies = [
 [project.urls]
 Homepage = "https://kryptorious.gumroad.com/l/jbvet"
 Documentation = "https://kryptorious.gumroad.com/l/jbvet"
-"Bug Tracker" = "https://github.com/kryptorious/apiguard/issues"
-Repository = "https://github.com/kryptorious/apiguard"
+"Bug Tracker" = "https://github.com/CodeGero/apiguard/issues"
+Repository = "https://github.com/CodeGero/apiguard"
 
 [project.optional-dependencies]
 dev = [
