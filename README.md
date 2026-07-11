@@ -97,3 +97,7 @@ Built by [Kryptorious Quantum Biosciences](https://kryptorious.gumroad.com).
 ---
 
 **Part of the Kryptorious developer-tools suite.** Get the full bundle with DevFlow Premium (multi-env CI, approval gates, infra-as-code): 👉 https://codegero.github.io/store/
+
+---
+
+**Part of the Kryptorious developer-tools suite.** Get the full bundle with DevFlow Premium (multi-env CI, approval gates, infra-as-code): 👉 https://codegero.github.io/store/
