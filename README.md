@@ -92,3 +92,8 @@ Upgrade to Premium ($9 lifetime) for:
 MIT — free for personal and commercial use. Premium features require a license.
 
 Built by [Kryptorious Quantum Biosciences](https://kryptorious.gumroad.com).
+
+
+---
+
+**Part of the Kryptorious developer-tools suite.** Get the full bundle with DevFlow Premium (multi-env CI, approval gates, infra-as-code): 👉 https://codegero.github.io/store/
